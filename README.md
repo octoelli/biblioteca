@@ -1,0 +1,2 @@
+# archlinux
+anotações gerais
