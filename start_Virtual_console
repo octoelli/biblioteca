@@ -1,7 +1,7 @@
 <h1>Failed to start Virtual console Setup error message</h1>
 
 Eu estava tentando consertar um teclado sem fio com mau comportamento,
-então encontrei uma falha no vconsole.setup. Consigo corrigi-lo alterando e reinstalando o Linux conforme sugerido por KEYMAP=us
+então encontrei uma falha no vconsole.setup. Consigo corrigi-lo alterando e reinstalando o KEYMAP=us
 
 Deixar assim:
 
