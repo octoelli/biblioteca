@@ -1,0 +1,16 @@
+Instale o WSL (Padrão Ubuntu):  wsl --install
+
+Lista de distribuição:  wsl --list --online
+
+Instalar outras distribuições: wsl --install -d <distro>
+
+Lista das distribuições instaladas: wsl --list --verbose
+
+Definir a distribuição padrão: wsl --set-default <Distro>
+
+Encerra imediatamente todas as distribuições: wsl --shutdown
+
+Desinstalar uma distribuição: wsl --unregister <Distro>
+
+
+
