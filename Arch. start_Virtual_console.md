@@ -4,14 +4,14 @@
 Eu estava tentando consertar um teclado sem fio com mau comportamento,
 então encontrei uma falha no vconsole.setup. Consigo corrigi-lo alterando e reinstalando o KEYMAP=us
 
-Deixar assim:
+Deixar assim:<p>
 
-$ sudo nano /etc/vconsole.conf
-KEYMAP=us
-$sudo mkinitcpio -P
-
-Saida:
-
-$ cat /etc/vconsole.conf
-KEYMAP=us
+$ sudo nano /etc/vconsole.conf<p>
+KEYMAP=us<p>
+$sudo mkinitcpio -P<p>
+<p>
+Saida:<p>
+<p>
+$ cat /etc/vconsole.conf<p>
+KEYMAP=us<p>
 
