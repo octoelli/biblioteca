@@ -1,0 +1,44 @@
+Documentation
+
+If you want to start using Chaotic-AUR or just need to copy the setup commands, this is the right place for you.
+Setup
+
+    We start by retrieving the primary key to enable the installation of our keyring and mirror list:
+
+    pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    pacman-key --lsign-key 3056513887B78AEB
+    pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+    pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+Then, we append (adding at the end) the following to /etc/pacman.conf:
+
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+
+Package builds
+
+    To see whether a package was already deployed after the last update on AUR, you can check the deploy log . Since it shows the last 500 deployments, chances are high that it can be found here. If not, the build might have failed. The always latest log of a deployment can be found on this page. You can always report such failures on our packages repository by creating a new issue. 
+
+Recommendations
+
+    You may want to use powerpill to download from all mirrors simultaneously if you are living in non-first-world countries. Besides downloading multiple packages, it splits a single one in parts and distributes all connections through the enabled mirrors. This is why it is still better in such areas, where CDNs aren't well established. We recommend using it as follows:
+
+    sudo pacman -Sy
+    sudo powerpill -Su
+    paru -Su
+
+Make sure to insert all mirrors in your pacman.conf or use chaotic-mirrorlist with all of them active if using powerpill.
+If you are using other third-party repositories, we recommend putting Chaotic-AUR prior to them in /etc/pacman.conf. Since we update most packages hourly and follow AUR PKGBUILDs, this repository is more suitable as the first option when downloading packages.
+If you need to omit a package update to use locally built ones (e.g: with native optimizations), you can add the following to /etc/pacman.conf:
+
+IgnorePkg = ...
+
+You can pick the repository from which to download a package like this:
+
+pacman -S chaotic-aur/mesa-tkg-git
+
+Some AUR helpers like paru support this syntax as well.
+
+paru -S chaotic-aur/firefox-hg
+
+You must have the multilib repository enabled.
