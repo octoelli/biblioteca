@@ -1,5 +1,5 @@
-# Kotlin-koans
-Solution proposal for  Kotlin koans
+# Kotlin-koans | [start now](https://play.kotlinlang.org/koans/overview)
+Kotlin Koans is a series of exercises to get you familiar with the Kotlin syntax and some idioms. Each exercise is created as a failing unit test, and your job is to make it pass. Here you can play with Koans online, but the same version of exercises is also available via JetBrains educational plugin right inside [IntelliJ IDEA or Android Studio](https://www.jetbrains.com/help/education/learner-start-guide.html?section=Kotlin%20Koans&_gl=1*1i6oppc*_gcl_au*MTY2MTY1MDAyNi4xNzIyMTA0ODY2*_ga*Mzk1NDU1Njk3LjE3MjIxMDQ4NTc.*_ga_9J976DJZ68*MTcyNDg1MjIxNC4xOC4xLjE3MjQ4NTMyNjAuMTguMC4w).
 ## Introduction
 * [Simple Functions](#simple-functions) 
 * [Named arguments](#named-arguments) 
