@@ -5,10 +5,10 @@ Setup
 
     We start by retrieving the primary key to enable the installation of our keyring and mirror list:
 
-    pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-    pacman-key --lsign-key 3056513887B78AEB
-    pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
-    pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    sudo pacman-key --lsign-key 3056513887B78AEB
+    sudo  pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+    sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 Then, we append (adding at the end) the following to /etc/pacman.conf:
 
@@ -23,9 +23,8 @@ Recommendations
 
     You may want to use powerpill to download from all mirrors simultaneously if you are living in non-first-world countries. Besides downloading multiple packages, it splits a single one in parts and distributes all connections through the enabled mirrors. This is why it is still better in such areas, where CDNs aren't well established. We recommend using it as follows:
 
-    sudo pacman -Sy
-    sudo powerpill -Su
-    paru -Su
+  #  sudo pacman -Sy
+  
 
 Make sure to insert all mirrors in your pacman.conf or use chaotic-mirrorlist with all of them active if using powerpill.
 If you are using other third-party repositories, we recommend putting Chaotic-AUR prior to them in /etc/pacman.conf. Since we update most packages hourly and follow AUR PKGBUILDs, this repository is more suitable as the first option when downloading packages.
